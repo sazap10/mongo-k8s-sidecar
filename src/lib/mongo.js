@@ -23,7 +23,10 @@ var getDb = function(host, done) {
     mongoOptions = {
       ssl: config.mongoSSLEnabled,
       sslAllowInvalidCertificates: config.mongoSSLAllowInvalidCertificates,
-      sslAllowInvalidHostnames: config.mongoSSLAllowInvalidHostnames
+      sslAllowInvalidHostnames: config.mongoSSLAllowInvalidHostnames,
+      sslCA: config.mongoSslCA,
+      sslKey: config.mongoSslKey,
+      sslCert: config.mongoSslCert
     }
   }
 
